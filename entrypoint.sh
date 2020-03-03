@@ -25,5 +25,5 @@ if [[ -n "${ACCESS_TOKEN}" ]]; then
     | jq -r '.token')"
 fi
 
-./config.sh --url "${REPO_URL}" --token "${RUNNER_TOKEN}" --name "${_RUNNER_NAME}" --work "${_RUNNER_WORKDIR}"
+./config.sh --unattended --url "${REPO_URL}" --token "${RUNNER_TOKEN}" --replace --name "${_RUNNER_NAME}" --work "${_RUNNER_WORKDIR}"
 ./run.sh
